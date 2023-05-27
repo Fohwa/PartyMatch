@@ -1,0 +1,17 @@
+{
+    "username": "maxdeicke",
+    "name": "Max Deicke",
+    "firstname": "Max",
+    "lastname": "Deicke",
+    "birthday": {
+        "day": 16,
+        "month": 7,
+        "year": 2004
+    },
+    "contact": {
+        "email": "mm.deicke@gmail.com",
+        "insta": "@maxdeicke",
+        "phone": "+491705040729"
+    }
+
+}

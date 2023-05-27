@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="normaltext">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login</title>
+
+    <h1>🥳 Party Match</h1>
+    <hr>
+    <table>
+        <tr>
+            <th><button onclick="home()">Home</button></th>
+            <th><button onclick="guest()">Guest</button></th>
+            <th><button onclick="info()">info</button></th>
+        </tr>
+    </table>
+
+</head>
+<body class="normaltext">
+    <div class="logininput">
+        <p class="text">Dein Benutzername oder dein Passwort waren falsch</p>
+        <p class="text">Versuche es erneut oder erstelle einen Account</p>
+    </div>
+    <form action="/login">
+        <input class="loginbutton" type="submit" value="Anmelden" />
+    </form>
+    
+    <p class="text" style="margin-bottom: 2%; margin-top: 0px; font-size: 12px;">Du hast noch keinen Account? <a href="/create">Erstellen</a></p>
+
+    
+</body>
+<script>
+    function home() {
+        window.location.href('./home')
+    }
+    function guest() {
+        window.location.href('./guest')
+    }
+    function info() {
+        window.location.href('./info')
+    }
+</script>
+</html>

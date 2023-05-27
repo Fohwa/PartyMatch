@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="normaltext">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login</title>
+
+    <h1>🥳 Party Match</h1>
+    <hr>
+    <table>
+        <tr>
+            <th><button onclick="home()">Home</button></th>
+            <th><button onclick="guest()">Guest</button></th>
+            <th><button onclick="info()">info</button></th>
+        </tr>
+    </table>
+
+</head>
+<body class="normaltext">
+    <div class="content hidescrollbar">
+        <div class="box">
+            <p class="header">Einloggen</p>
+            <p class="text" style="margin-bottom: 10%; text-align: left; margin-left: 10%;">Gib deinen Benutzernamen und dein Passwort ein, um dich einzuloggen</p>
+            
+            <div class="logininput">
+                <label class="loginlabel" for="username">Benutzername: </label>
+                <input class="textinput" type="text" id="username" name="username" placeholder="Benutzername...">
+                <br>
+                <label class="loginlabel" for="password">Passwort:</label>
+                <input class="textinput" type="password" id="password" name="password" placeholder="Passwort...">
+                <br>
+                <p class="text" style="text-align: right; margin-top: 1%; font-size: 15px;"><input type="checkbox" style="size: 10%;" onclick="showPassword()">Passwort anzeigen</p>
+                <script>
+                    function showPassword() {
+                    var x = document.getElementById("password");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }}
+    
+                    function trylogin() {
+                        console.log("try login");
+                        var uname = document.getElementById("username").value;
+                        var password = document.getElementById("password").value;
+                        console.log("Username: " + uname);
+                        console.log("Password: " + password);
+    
+                        //log into the server
+                        var url = `/loginattempt?uname=${uname}&password=${password}`;
+                        window.location.href = url;
+    
+                    }
+    
+                </script>
+            </div>
+            <button class="loginbutton" onclick="trylogin()">Anmelden</button>
+            <p class="text" style="margin-bottom: 5%; margin-top: 0px; font-size: 12px;">Du hast noch keinen Account? <a href="/create">Erstellen</a></p>
+        </div>
+    
+    
+    </div>
+    
+</body>
+<script>
+    function home() {
+        window.location.href('./home')
+    }
+    function guest() {
+        window.location.href('./guest')
+    }
+    function info() {
+        window.location.href('./info')
+    }
+</script>
+</html>
